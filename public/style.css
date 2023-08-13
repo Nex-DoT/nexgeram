@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('./fonts/vazir.eot') format('eot'),
+     url('./fonts/vazir.ttf') format('truetype'),
+    url('./fonts/vazir.woff') format('woff'),
+    url('./fonts/vazir.woff2') format('woff2');
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'vazir';
+    box-sizing: border-box;
+    direction: ltr;
+}
+html, body {
+    overflow-x: hidden;
+  }
+body{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+#root{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    width: 4px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(128, 128, 128, 0.498);
+}
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: gray;
+    border-radius: 5px;
+}
