@@ -37,7 +37,7 @@ const SettingMenu = () => {
                 </div>
             </div>
         {/* //Menu */}
-            <div className={menu ? ' drop-shadow-lg w-1/3 h-full bg-gray-800 text-white absolute left-0 top-0 flex flex-col justify-around pb-80 transition-all opacity-100' : " drop-shadow-xl opacity-0 -left-1/2 transition-all w-1/3 h-full bg-gray-800 text-white absolute top-0 flex flex-col justify-around pb-80"} >
+            <div className={menu ? ' drop-shadow-lg w-64 h-full bg-gray-800 text-white absolute left-0 top-0 flex flex-col justify-around pb-80 transition-all opacity-100' : " drop-shadow-xl opacity-0 -left-1/2 transition-all w-64 h-full bg-gray-800 text-white absolute top-0 flex flex-col justify-around pb-80"} >
                 <div className='p-3'>
                     <img src="" alt="" className='w-12 h-12 rounded-full mb-3'/>
                     <div className='flex w-full items-center justify-between pr-1 pl-1'>
@@ -46,7 +46,7 @@ const SettingMenu = () => {
                     </div>
                 </div>
                 <ul className='p-3 text-sm'>
-                    <li className='flex h-8 items-center cursor-pointer border-solid'><AiOutlineTeam className=' text-lg mr-3'/>New group</li>
+                    <li className='flex h-8 items-center cursor-pointer border-solid '><AiOutlineTeam className=' text-lg mr-3'/>New group</li>
                     <li className='flex h-8 items-center cursor-pointer'><AiOutlineNotification className=' text-lg mr-3'/>New Channel</li>
                     <li className='flex h-8 items-center cursor-pointer'><AiOutlineUser className=' text-lg mr-3'/>Contacts</li>
                     <li className='flex h-8 items-center cursor-pointer'><AiOutlinePhone className=' text-lg mr-3'/>Calls</li>
