@@ -216,33 +216,85 @@ const data = {
             ],
         },
     ],
-    channel: {
-        codeUi:[
-            {
-                message:"1-Define the purpose and target audience: Clearly understand the purpose of your website and who your target audience is. This will help you tailor the design to meet their needs effectively.",
-                time: "2:15"
-            },
-            {
-                message:"2-Keep it simple and user-friendly: A clean and intuitive design makes it easier for visitors to navigate your site. Use clear headings, logical page hierarchy, and easy-to-understand navigation menus.",
-                time: "2:18"
-            },
-            {
-                message:"3-Responsive design: Ensure that your website is responsive, meaning it adapts well to different screen sizes and devices (desktops, tablets, smartphones). This improves the user experience across various platforms.",
-                time: "2:19"
-            },
-            {
-                message:"4-Consistent branding: Maintain consistent branding elements like color scheme, fonts, logos throughout the website to create a cohesive visual identity that aligns with your brand.",
-                time: "2:20"
-            },
-            {
-                message:"5-Use whitespace effectively: Whitespace (empty space) helps improve readability by giving content room to breathe. It also creates a sense of elegance and professionalism in your design.",
-                time: "2:25"
-            }
-        ]
-    },
-    group:{
-        uniGroup:{
-            g_name: "دانشگاه",
+    channel:[
+        {
+            first_name : "Ui desinge",
+            img: "",
+            id: "uidesingereal",
+            messages : [
+                {
+                    message:"1-Define the purpose and target audience: Clearly understand the purpose of your website and who your target audience is. This will help you tailor the design to meet their needs effectively.",
+                    time: "2:15",
+                    user: "admin"
+                },
+                {
+                    message:"2-Keep it simple and user-friendly: A clean and intuitive design makes it easier for visitors to navigate your site. Use clear headings, logical page hierarchy, and easy-to-understand navigation menus.",
+                    time: "2:18",
+                    user: "admin"
+                },
+                {
+                    message:"3-Responsive design: Ensure that your website is responsive, meaning it adapts well to different screen sizes and devices (desktops, tablets, smartphones). This improves the user experience across various platforms.",
+                    time: "2:19",
+                    user: "admin"
+                },
+                {
+                    message:"4-Consistent branding: Maintain consistent branding elements like color scheme, fonts, logos throughout the website to create a cohesive visual identity that aligns with your brand.",
+                    time: "2:20",
+                    user: "admin"
+                },
+                {
+                    message:"5-Use whitespace effectively: Whitespace (empty space) helps improve readability by giving content room to breathe. It also creates a sense of elegance and professionalism in your design.",
+                    time: "2:25",
+                    user: "admin"
+                }
+            ],
+        },{
+            first_name : "music channel",
+            img: "",
+            id: "uidesingereal",
+            messages : [
+                {
+                    message:"",
+                    time: "2:15",
+                    user: "admin",
+                    file: true,
+                    file_url: ""
+                },
+                {
+                    message:"",
+                    time: "2:18",
+                    user: "admin",
+                    file: true,
+                    file_url: ""
+                },
+                {
+                    message:"",
+                    time: "2:25",
+                    user: "admin",
+                    file: true,
+                    file_url: ""
+                },
+                {
+                    message:"",
+                    time: "2:32",
+                    user: "admin",
+                    file: true,
+                    file_url: ""
+                },
+                {
+                    message:"",
+                    time: "2:38",
+                    user: "admin",
+                    file: true,
+                    file_url: ""
+                }
+            ],
+        }
+    ],
+    group:[
+        {   
+            id:'unigroup',
+            first_name: "دانشگاه",
             meassages:[
                 {   
                     user:"almasB",
@@ -250,8 +302,19 @@ const data = {
                     time: "2:57",
                 }
             ]
+        },
+        {   
+            id:'frontend',
+            first_name: "frontend || فرانت اند",
+            meassages:[
+                {   
+                    user:"almasB",
+                    text:"",
+                    time: "2:57",
+                }
+            ]
         }
-    },
+    ],
     bot:{},
 }
 export const dataval  = ()=>{
