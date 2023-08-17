@@ -5,7 +5,7 @@ const data = {
             id: "arasha",
             first_name:'arash',
             last_name:'almas',
-            messages:[
+            message:[
                 {
                     time: '12:23' ,
                     user: "arash",
@@ -45,10 +45,10 @@ const data = {
         },
         {   
             img:'',
-            id: "arasha",
+            id: "reza",
             first_name:'reza',
             last_name:'mohamadi',
-            messages:[
+            message:[
                 {
                     time: '12:23' ,
                     user: 'reza',
@@ -88,10 +88,10 @@ const data = {
         },
         {   
             img:'',
-            id: "arasha",
+            id: "negar1",
             first_name:'negar',
             last_name:'reyhani',
-            messages:[
+            message:[
                 {
                     time: '12:23' ,
                     user: 'negar',
@@ -131,10 +131,10 @@ const data = {
         },
         {   
             img:'',
-            id: "arasha",
+            id: "mamad",
             first_name:'mamad',
             last_name:'almas',
-            messages:[
+            message:[
                 {
                     time: '12:23' ,
                     user: "mamad",
@@ -174,10 +174,10 @@ const data = {
         },
         {   
             img:'',
-            id: "arasha",
+            id: "mehdi1",
             first_name:'mehdi',
             last_name:'almas',
-            messages:[
+            message:[
                 {
                     time: '12:23' ,
                     user: "mehdi",
@@ -221,7 +221,7 @@ const data = {
             first_name : "Ui desinge",
             img: "",
             id: "uidesingereal",
-            messages : [
+            message: [
                 {
                     message:"1-Define the purpose and target audience: Clearly understand the purpose of your website and who your target audience is. This will help you tailor the design to meet their needs effectively.",
                     time: "2:15",
@@ -251,8 +251,8 @@ const data = {
         },{
             first_name : "music channel",
             img: "",
-            id: "uidesingereal",
-            messages : [
+            id: "music_nex",
+            message: [
                 {
                     message:"",
                     time: "2:15",
@@ -295,23 +295,48 @@ const data = {
         {   
             id:'unigroup',
             first_name: "دانشگاه",
-            meassages:[
+            memmbers: 4 ,
+            message:[
                 {   
-                    user:"almasB",
-                    text:"باز دانشگاه داره شروع میشه خسته شدیم دیه",
+                    g_user:"almasB",
+                    message:"باز دانشگاه داره شروع میشه خسته شدیم دیه",
                     time: "2:57",
-                }
+                },{   
+                    g_user:"amir",
+                    message:"بدبختی شروع شد باز",
+                    time: "2:57",
+                },{   
+                    g_user:"puya",
+                    message:"چه بد",
+                    time: "2:57",
+                },
             ]
         },
         {   
             id:'frontend',
             first_name: "frontend || فرانت اند",
-            meassages:[
+            message:[
                 {   
-                    user:"almasB",
-                    text:"",
+                    g_user:"erfan",
+                    message:"پروژه امادس",
                     time: "2:57",
-                }
+                },{   
+                    g_user:"ali",
+                    message:"عالی شد چکش کردم",
+                    time: "3:25",
+                },{   
+                    g_user:"erfan",
+                    message:"ترشی نخورم یه چیزی میشم",
+                    time: "3:15",
+                },{   
+                    g_user:"ali",
+                    message:"😂",
+                    time: "3:57",
+                },{   
+                    g_user:"erfan",
+                    message:"😎",
+                    time: "4:57",
+                },
             ]
         }
     ],

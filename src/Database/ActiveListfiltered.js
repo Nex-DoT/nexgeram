@@ -1,7 +1,7 @@
 import React,{createContext , useReducer} from 'react';
 export const activebar = createContext();
 const inisitioalState = {
-    all: true,
+    all: false,
     user:false,
     channel:false,
     group:false,

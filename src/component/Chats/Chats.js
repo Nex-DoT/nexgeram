@@ -10,7 +10,13 @@ const Chats = () => {
     },[]);
     return (
         <div>
+            <div>
+                {state.all && chats.user.map(e=> <CardBox key={e.id} value={e}/>)}
+                {state.all && chats.group.map(e => <CardBox key={e.id} value={e}/>)}
+                {state.all && chats.channel.map(e => <CardBox key={e.id} value={e}/>)}
+            </div>
             {state.channel && chats.channel.map(e => <CardBox key={e.id} value={e}/>)}
+            {state.group && chats.group.map(e => <CardBox key={e.id} value={e}/>)}
             {state.user && chats.user.map(e => <CardBox key={e.id} value={e}/>)}
         </div>
     );
