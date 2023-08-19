@@ -1,15 +1,16 @@
 import './App.css';
-import ChatMenu from './component/Chats/ChatMenu';
-import SettingMenu from './component/SettingMneu/SettingMenu';
-import Chats from './component/Chats/Chats';
+import User from './component/User/User';
 import WelcomeComponent from './component/WelcomeComponent/WelcomeComponent';
+import { Routes,Route,Navigate,Link } from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
-      <WelcomeComponent/>
-      {/* <SettingMenu/> */}
-      {/* <ChatMenu/> */}
-      {/* <Chats/> */}
+      <Routes>
+        <Route path='/' element={<WelcomeComponent/>}/>
+        <Route path='/user' element={<User/>}/>
+        <Route path='*' element={<Navigate to="/" />}/>
+      </Routes>
     </div>
   );
 }

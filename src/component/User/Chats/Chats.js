@@ -1,6 +1,6 @@
 import React,{useContext , useState ,useEffect} from 'react';
-import { activebar } from '../../Database/ActiveListfiltered';
-import { dataval } from '../../Database/Data';
+import { activebar } from '../../../Database/ActiveListfiltered';
+import { dataval } from '../../../Database/Data';
 import CardBox from './CardBox';
 const Chats = () => {
     const [chats , setChats] = useState()
