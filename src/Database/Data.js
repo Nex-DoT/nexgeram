@@ -1,4 +1,11 @@
 const data = {
+    userInformation:{
+        username: "",
+        id:"",
+        email:"",
+        phoneNumber:"",
+        imgUrl:"",
+    },
     user:[
         {   
             img:'',
