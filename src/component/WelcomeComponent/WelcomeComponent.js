@@ -124,7 +124,7 @@ const WelcomeComponent = () => {
           {currentSlide === 3 ? null : <button className={currentSlide === 0 ? ' w-16 h-8 bg-cyan-500 cursor-default opacity-70 text-white text-xs rounded-md':"w-16 h-8 bg-cyan-500 text-white text-xs rounded-md"} onClick={currentSlide !==0 ? prevSlide : null }>Back</button>}
             {currentSlide === 2 ?
             <button className={currentSlide === 3 ? ' w-16 h-8 cursor-default bg-cyan-500 opacity-70 text-white text-xs rounded-md':"w-16 h-8 bg-cyan-500 text-white text-xs rounded-md"} onClick={submitHandeler}>Next</button> :
-            <button className={currentSlide===3 ?"w-28 h-8 bg-cyan-500 text-white text-xs rounded-md": "w-16 h-8 bg-cyan-500 text-white text-xs rounded-md"} onClick={currentSlide !==3 && nextSlide}>{currentSlide===3 ? <Link to={'/user'}>Start Messaging</Link> : "Next"}</button> }
+            <button className={currentSlide===3 ?"w-28 h-8 bg-cyan-500 text-white text-xs rounded-md": "w-16 h-8 bg-cyan-500 text-white text-xs rounded-md"} onClick={currentSlide !==3 ? nextSlide : null}>{currentSlide===3 ? <Link to='/user'>Start Messaging</Link> : "Next"}</button> }
             
         </div>
       </div>

@@ -1,3 +1,11 @@
+import profile from "../profilePicture/0.jpg"
+import profile1 from "../profilePicture/1.jpg"
+import profile2 from "../profilePicture/2.jpg"
+import profile3 from "../profilePicture/3.jpg"
+import profile4 from "../profilePicture/5.jpg"
+import profile5 from "../profilePicture/front.gif"
+import uiux from "../profilePicture/uiux.jpg"
+import music from "../profilePicture/music.png"
 const data = {
     userInformation:{
         username: "",
@@ -8,7 +16,7 @@ const data = {
     },
     user:[
         {   
-            img:'',
+            img:profile,
             id: "arasha",
             first_name:'arash',
             last_name:'almas',
@@ -51,7 +59,7 @@ const data = {
             ],
         },
         {   
-            img:'',
+            img:profile1,
             id: "reza",
             first_name:'reza',
             last_name:'mohamadi',
@@ -94,7 +102,7 @@ const data = {
             ],
         },
         {   
-            img:'',
+            img:profile2,
             id: "negar1",
             first_name:'negar',
             last_name:'reyhani',
@@ -137,7 +145,7 @@ const data = {
             ],
         },
         {   
-            img:'',
+            img:profile3,
             id: "mamad",
             first_name:'mamad',
             last_name:'almas',
@@ -180,7 +188,7 @@ const data = {
             ],
         },
         {   
-            img:'',
+            img:profile4,
             id: "mehdi1",
             first_name:'mehdi',
             last_name:'almas',
@@ -226,7 +234,7 @@ const data = {
     channel:[
         {
             first_name : "Ui desinge",
-            img: "",
+            img: uiux,
             id: "uidesingereal",
             message: [
                 {
@@ -257,7 +265,7 @@ const data = {
             ],
         },{
             first_name : "music channel",
-            img: "",
+            img: music,
             id: "music_nex",
             message: [
                 {
@@ -301,6 +309,7 @@ const data = {
     group:[
         {   
             id:'unigroup',
+            img: profile3,
             first_name: "دانشگاه",
             memmbers: 4 ,
             message:[
@@ -320,6 +329,7 @@ const data = {
             ]
         },
         {   
+            img: profile5,
             id:'frontend',
             first_name: "frontend || فرانت اند",
             message:[
