@@ -11,7 +11,6 @@ const activeAction = (state , action) =>{
     switch(action.type){
         case "cheange" : 
         let FalseActive =  {
-            all: false,
             user:false,
             channel:false,
             group:false,
