@@ -5,7 +5,7 @@ import ChatMenu from './Chats/ChatMenu';
 import Chats from './Chats/Chats';
 const User = () => {
     return (
-        <div>
+        <div className='h-full'>
             <SettingMenu/>
             <Setting/>
             <ChatMenu/>
