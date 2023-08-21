@@ -16,6 +16,9 @@ import { BsMoonStars } from "react-icons/bs";
 //blaw balw
 const NexgramVersion = "v-1.2";
 const SettingMenu = () => {
+    // state for menu bar Handeler
+    const [menu , setMenu] = useState(false);
+    // btn for menu bar hide or show 
     const menuHandelaer = ()=>{
         if(menu === false ){
             setMenu(true)
@@ -23,7 +26,7 @@ const SettingMenu = () => {
             setMenu(false)
         }
     }
-    const [menu , setMenu] = useState(false)
+    // component 
     return (
         <>
         {/* //menu Btn */}

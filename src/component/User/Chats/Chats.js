@@ -1,14 +1,22 @@
 import React,{useContext , useState ,useEffect} from 'react';
+//active function 
 import { activebar } from '../../../Database/ActiveListfiltered';
+// fake data function (returning a objext)
 import { dataval } from '../../../Database/Data';
+//components
 import Pv from './PvComponent/Pv';
 import CardBox from './CardBox';
+//component function 
 const Chats = () => {
-    const [chats , setChats] = useState()
+    //state for fake data save 
+    const [chats , setChats] = useState();
+    //using the state information in ActiveListFilltered to show the chats
     const [state , newAction] =  useContext(activebar);
+    //mounting data 
     useEffect(() =>{
         setChats(dataval());
     },[]);
+    //jsx
     return (
         <div className='flex w-full justify-around h-3/4'>
             <div>

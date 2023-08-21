@@ -1,10 +1,14 @@
 import React,{useState,useContext,useEffect} from 'react';
+// active bar context Reducer 
 import { activebar } from '../../../Database/ActiveListfiltered';
 const ChatMenu = () => {
+    // context 
     const [state , newAction] =  useContext(activebar);
+    // mounting for set state to active the user Bar
     useEffect(() =>{
         newAction({type:"cheange" , name:"user"})
     },[]);
+    //jsx
     return (
         <div>
             <ul className='flex justify-around w-full text-gray-500 font-bold text-sm h-10 items-center'>

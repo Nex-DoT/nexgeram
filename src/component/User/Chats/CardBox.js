@@ -1,8 +1,11 @@
 import React from 'react';
-import img from "../../../profilePicture/1.jpg"
+//component
 const CardBox = ({value}) => {
+    //slicing the string of last message
     const lastmessege = value.message.slice(-1)[0].message.split(" ").slice(0 , 3);
+    //returning the 4 word of string
     const lastmessegesplite = lastmessege.map(e =>{ return <p className=' inline'>{e} </p>});
+    //jsx
     return (
         <div className=' cursor-pointer w-72 h-14 bg-gray-700 mt-2 ml-6 mb-2 rounded-md flex items-center justify-between transition-all hover:bg-gray-600'>
             {console.log(value.message.time)}
