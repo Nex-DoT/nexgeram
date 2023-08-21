@@ -1,14 +1,18 @@
 import React from 'react';
 //component
-const CardBox = ({value}) => {
+const CardBox = ({value , onClick}) => {
     //slicing the string of last message
     const lastmessege = value.message.slice(-1)[0].message.split(" ").slice(0 , 3);
     //returning the 4 word of string
     const lastmessegesplite = lastmessege.map(e =>{ return <p className=' inline'>{e} </p>});
+   // frunction for changing the Pv data
+   const pvHandeler = ()=>{
+        onClick(value)
+   }
     //jsx
     return (
-        <div className=' cursor-pointer w-72 h-14 bg-gray-700 mt-2 ml-6 mb-2 rounded-md flex items-center justify-between transition-all hover:bg-gray-600'>
-            {console.log(value.message.time)}
+        <div className=' cursor-pointer w-72 h-14 bg-gray-700 mt-px ml-6 mb-2 rounded-md flex items-center justify-between transition-all hover:bg-gray-600' onClick={pvHandeler}>
+            
             <div className='flex'>
                 <img src={value.img} className='w-10 h-10 ml-3 mr-3 rounded-full' alt="" />
                 <div>
