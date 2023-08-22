@@ -1,10 +1,78 @@
-import React,{useState} from 'react';
+import React,{useState ,useReducer} from 'react';
 //icon 
 import { AiOutlineSend } from "react-icons/ai";
 import { AiOutlineMore} from "react-icons/ai";
 import { AiOutlineClose} from "react-icons/ai";
+
+//inistial state for reducer 
+const inistialState = {
+    color:{
+        Orient:false,      // "#005e7c"
+        BlackPearl:false,  // "#040f16"
+        PacificBlue:false, // "#0094c6"
+        Stratos: false,    // "#001242"
+        BlackRussian: false// "#000022"
+    },
+    textSize:{
+        sx:false,
+        sm:false,
+        md:false,
+        lg:false,
+    },
+    textColor:{
+        black: false,
+        white: false,
+    }
+
+}
+const functionReducer = (state , action)=>{
+    switch(action.type){
+        case "BACKCOLOR": 
+            let colorReset = {
+                Orient:false,      // "#005e7c"
+                BlackPearl:false,  // "#040f16"
+                PacificBlue:false, // "#0094c6"
+                Stratos: false,    // "#001242"
+                BlackRussian: false// "#000022"
+            } 
+            return {
+                ...state,
+                color:{
+                    ...colorReset,
+                    [action.Name] : true
+                },
+            }
+        case "TEXTSIZE": 
+            let textSizeReset = {
+                sx:false,
+                sm:false,
+                md:false,
+                lg:false,
+            };
+            return {
+                ...state,
+                textSize:{
+                    ...textSizeReset,
+                    [action.Name] : true
+                }
+            }
+        case "TEXTCOLER": 
+            let textColerReset = {
+                black:false,
+                white:false,
+            }
+            return {
+                ...state,
+                textColer:{
+                    ...textColerReset,
+                    [action.Name] : true
+                }
+            }
+    }
+}
 //component
 const Pv = ({Data}) => {
+
     //state For more btn
     const [more , setMore] = useState(false);
     //function for more btn for show or hide
