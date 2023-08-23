@@ -6,22 +6,27 @@ import { AiOutlineClose} from "react-icons/ai";
 
 //inistial state for reducer 
 const inistialState = {
+    menushow:{
+        color: false,
+        textSize: false,
+        textColor: false,
+    },
     color:{
-        Orient:false,      // "#005e7c"
+        Orient:true,      // "#005e7c"
         BlackPearl:false,  // "#040f16"
         PacificBlue:false, // "#0094c6"
         Stratos: false,    // "#001242"
         BlackRussian: false// "#000022"
     },
     textSize:{
-        sx:false,
+        sx:true,
         sm:false,
         md:false,
         lg:false,
     },
     textColor:{
+        white: true,
         black: false,
-        white: false,
     }
 
 }
@@ -68,11 +73,25 @@ const functionReducer = (state , action)=>{
                     [action.Name] : true
                 }
             }
+        case "OPENSTYLE": 
+            let restOpenStyle = {
+                color: false,
+                textSize: false,
+                textColor: false,
+            };
+            return{
+                ...state,
+                menushow:{
+                    ...restOpenStyle,
+                    [action.Name] : true
+                }
+            }
     }
 }
 //component
 const Pv = ({Data}) => {
-
+    //useReducer for 
+    const [state , action] = useReducer(functionReducer , inistialState);
     //state For more btn
     const [more , setMore] = useState(false);
     //function for more btn for show or hide
@@ -108,6 +127,35 @@ const Pv = ({Data}) => {
                         <li className='h-1/3 justify-center items-center flex text-white hover:bg-gray-600 w-full rounded-t-md cursor-pointer text-xs'>background color</li>
                         <li className='h-1/3 w-full border-gray-400 border-b border-t flex items-center justify-center text-white hover:bg-gray-600 cursor-pointer text-xs'>font size</li>
                         <li className='h-1/3 flex items-center justify-center text-white hover:bg-gray-600 w-full rounded-b-md cursor-pointer text-xs'>text color</li>
+                                {state.menushow.color &&
+                                    <div className='w-16 h-28 absolute right-32 felx items-center justify-center rounded-md bg-gray-500 z-20'>
+                                        <ul className='flex flex-wrap items-center justify-around h-full relative after:absolute  after:bg-gray-500 after:w-4 after:h-4 after:top-2 after:-right-2 after:z-10 after:rotate-45 '>
+                                            <li className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-orient border'></li>
+                                            <li className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-blackpearl border'></li>
+                                            <li className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-pacificblue  border'></li>
+                                            <li className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-blackrussian border'></li>
+                                            <li className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-stratos  border'></li>
+                                        </ul>
+                                    </div>
+                                     }
+                                {state.menushow.textSize &&
+                                    <div className='w-16 h-28 absolute right-32 felx items-center justify-center rounded-md bg-gray-500 z-20'>
+                                        <ul className='flex flex-col items-center justify-between h-full relative after:absolute  after:bg-gray-500 after:w-4 after:h-4 after:top-12 after:-right-2 after:z-10 after:rotate-45 '>
+                                            <li className='text-sx text-white w-full h-full hover:bg-gray-600'>Small*2</li>
+                                            <li className='text-sx text-white w-full h-full hover:bg-gray-600'>Small</li>
+                                            <li className='text-sx text-white w-full h-full hover:bg-gray-600'>Mediom</li>
+                                            <li className='text-sx text-white w-full h-full hover:bg-gray-600'>Large</li>
+                                        </ul>
+                                    </div>
+                                    }
+                                {state.menushow.textColor &&
+                                    <div className='w-16 h-28 absolute right-32 felx items-center justify-center rounded-md bg-gray-500 z-20'>
+                                        <ul className='flex flex-col items-center justify-between h-full relative after:absolute  after:bg-gray-500 after:w-4 after:h-4 after:top-12 after:-right-2 after:z-10 after:rotate-45 '>
+                                            <li className='text-sx text-white w-full h-full hover:bg-gray-600'>White</li>
+                                            <li className='text-sx text-white w-full h-full hover:bg-gray-600'>Black</li>
+                                        </ul>
+                                    </div>
+                                     }
                     </ul>
                 </div>}
         </div>
