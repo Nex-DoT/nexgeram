@@ -12,11 +12,12 @@ const inistialState = {
         textColor: false,
     },
     color:{
-        Orient:true,       // "#005e7c"
-        BlackPearl:false,  // "#040f16"
-        PacificBlue:false, // "#0094c6"
-        Stratos: false,    // "#001242"
-        BlackRussian: false// "#000022"
+        Orient:true,        // "#005e7c"
+        BlackPearl:false,   // "#040f16"
+        PacificBlue:false,  // "#0094c6"
+        Stratos: false,     // "#001242"
+        BlackRussian: false,// "#000022"
+        Gray: false,        // gray-800 TailWind
     },
     textSize:{
         xs:true,
@@ -35,11 +36,12 @@ const functionReducer = (state , action)=>{
     switch(action.type){
         case "BACKCOLOR": 
             let colorReset = {
-                Orient:false,      // "#005e7c"
-                BlackPearl:false,  // "#040f16"
-                PacificBlue:false, // "#0094c6"
-                Stratos: false,    // "#001242"
-                BlackRussian: false// "#000022"
+                Orient:false,       // "#005e7c"
+                BlackPearl:false,   // "#040f16"
+                PacificBlue:false,  // "#0094c6"
+                Stratos: false,     // "#001242"
+                BlackRussian: false,// "#000022"
+                Gray: false,        // gray-800 TailWind
             } 
             return {
                 ...state,
@@ -106,8 +108,7 @@ const Pv = ({Data}) => {
     };
     //jsx
     return (
-        <div className=' bg-gray-700 w-2/3 m-2 h-full  rounded-md shadow-inner relative'>
-            {console.log(Data)}
+        <div className={`${state.color.Gray && "bg-gray-700"} ${state.color.Orient && "bg-orient"} ${state.color.BlackPearl && "bg-blackpearl"} ${state.color.PacificBlue && " bg-pacificblue"} ${state.color.Stratos && " bg-stratos"} ${state.color.BlackRussian && " bg-blackrussian"}  w-2/3 m-2 h-full  rounded-md shadow-inner relative`}>
             <div className=' absolute top-0 rounded-t-md w-full h-14  flex items-center justify-between bg-gray-600 shadow-lg'>
                 <div className='flex items-center'>
                     <img src="" className=' w-12 h-12 rounded-full ml-5 mr-3 shadow-lg ' alt="" />
@@ -137,6 +138,7 @@ const Pv = ({Data}) => {
                                             <li onClick={()=>{action({type:"BACKCOLOR" , Name:"PacificBlue"})}} className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-pacificblue  border'></li>
                                             <li onClick={()=>{action({type:"BACKCOLOR" , Name:"BlackRussian"})}} className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-blackrussian border'></li>
                                             <li onClick={()=>{action({type:"BACKCOLOR" , Name:"Stratos"})}} className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-stratos  border'></li>
+                                            <li onClick={()=>{action({type:"BACKCOLOR" , Name:"Gray"})}} className=' w-6 h-6 rounded-full z-20 transition-all cursor-pointer hover:scale-105 bg-gray-800  border'></li>
                                         </ul>
                                     </div>
                                      }
